@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Selamat Datang di Siabsen </h1>
+        <img src="asset/logokp.png" alt="Logo Absensi Online" style="width: 75px;">
+    </header>
+    
+    <main>
+        <form id="attendanceForm">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="date">Tanggal:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="hadir">Hadir</option>
+                <option value="tidak_hadir">Tidak Hadir</option>
+            </select><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="attendanceList">
+            <div class="attendance-item" id="attendanceItem1">
+                <p><span>Nama:</span> John Doe</p>
+                <p><span>Tanggal:</span> 2024-03-07</p>
+                <p><span>Status:</span> Hadir</p>
+                <button class="edit">Edit</button>
+                <button class="delete">Hapus</button>
+            </div>          
+        </div>
+        <button id="exportExcelBtn">Ekspor Excel</button>
+
+    </main>
+    <center><p style="font-size: 12px; margin-top: 10px; color: #7A7A7D;">Copyright &COPY; <b> DAVIT YUDISTIRA </b> | 2024</p></center>    
+    <body>
+        <!-- Modal Edit -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Edit Data Absensi</h2>
+      <form id="editForm">
+        <label for="editName">Nama:</label>
+        <input type="text" id="editName" name="editName"><br>
+        <label for="editDate">Tanggal:</label>
+        <input type="date" id="editDate" name="editDate"><br>
+        <label for="editStatus">Status:</label>
+        <select id="editStatus" name="editStatus">
+          <option value="hadir">Hadir</option>
+          <option value="tidak_hadir">Tidak Hadir</option>
+        </select><br>
+        <button id="saveChangesBtn" type="button" class="button">Simpan Perubahan</button>      
+      </form>
+    </div>
+  </div>
+  
+    </body>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
